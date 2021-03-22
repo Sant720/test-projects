@@ -1,0 +1,37 @@
+<!-- 
+
+==========================================
+Selects a random approved CTA on page load
+==========================================
+
+-->
+
+<style>
+    #output {
+      color: white;
+      font-size: 30px;
+      font-family: "Orkney Light", Lato, sans-serif;
+      font-weight: 500;
+      line-height: 39px;
+      margin-bottom: 0px;
+    }
+    </style>
+    
+    <p id="output"></p>
+    
+    <script>
+    window.onload = function(){
+        var myArray = [
+      "Get ready. We are here to drive your digital transformation and take it to the next level.",
+      "We create impactful solutions that drive meaningful change with a strategic vision.",
+      "We provide top services for world-class clients, from startups to companies of all sizes.",
+      "Get a dedicated Delivery Team Powered by Technology and Driven by Talent."
+    ];
+    
+    var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
+    
+    document.getElementById('output').innerHTML = randomItem;
+    };
+    </script>
+    
+    
