@@ -7,6 +7,7 @@ const dragger = (e) => {
     // console.log(e.layerX)
     let xPos = e.layerX;
     before.style.width = xPos + "px";
+    slider.style.left = xPos + "px";
 }
 
 container.addEventListener("mousemove", dragger);
