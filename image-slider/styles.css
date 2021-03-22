@@ -1,7 +1,10 @@
 :root {
     --w: 90vw;
     --h: 60vh;
-    --clr-dark: #11121b;
+    --clr-dark: #141D26;
+    --clr-high: #F9AD1E;
+    --clr-accent: #C51F5D;
+    --radius: 1.5rem;
 }
 
 * {
@@ -18,6 +21,30 @@ body {
     background: var(--clr-dark);
 }
 
+h1 {
+    color: var(--clr-high);
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: 4rem;
+    text-align: center;
+    margin: 20px 0px;
+    position: fixed;
+    top: 1em;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    pointer-events: none;
+    z-index: 10;
+}
+
+h1::after {
+    display: block;
+    background: var(--clr-accent);
+    content: "";
+    width: 100%;
+    height: 0.5rem;
+    border-radius: 1.5rem;
+}
+
 .container {
     position: relative;
     width: var(--w);
@@ -26,6 +53,7 @@ body {
 
 .container-before, .container-after {
     position: absolute;
+    /* border-radius: var(--radius); */
 }
 
 .container-before {
@@ -37,10 +65,12 @@ img {
     width: var(--w);
     height: var(--h);
     object-fit: cover;
+    /* border-radius: var(--radius); */
+    box-shadow: 0 0 1000px 10px #243447;
 }
 
 .slider {
-    width: 0.5rem;
+    width: 0rem;
     background: var(--clr-dark);
     height: 100%;
     z-index: 10;
